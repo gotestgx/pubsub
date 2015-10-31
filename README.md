@@ -6,6 +6,9 @@ A simple pub-sub polling service with an HTTP-based interface.
 * Messages are stored in-memory
 * A message is deleted after all subscribers have received it
 
+## Dependency
+ * gorilla mux (go get github.com/gorilla/mux)
+
 ### API
 pubsub provides a Restful service HTTP-based interface
 
