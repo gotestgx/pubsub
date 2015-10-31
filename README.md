@@ -1,4 +1,4 @@
-# pubsub
+1;2c# pubsub
 A simple pub-sub polling service with an HTTP-based interface.
 * A topic is identified by a name
 * Subscribers to a topic do not receive past messages
@@ -34,11 +34,11 @@ Code consists of a main.go and three packages:
 
   The web service package utilizes the gorilla mux package to service Web Service calls
   The Web Service calls are pushed onto a service channel where they are processed
-* datastore - A data structure implementing PubSub semantics for arbitrary messages 
+* datastore - A per-topic data structure implementing PubSub semantics for arbitrary messages 
 
   A Map-backed datastore providing, on average, constant O(1) lookup, insert, and delete times
 
-  Message storage is unbounded. Slow subscribers can cause an Out of Memory condition.
+  Message storage is unbounded.  Out of Memory conditions are not handled.
 
   The topic datastore uses two structures: 'message' and 'PubSubDS':
      * 'message' struct contains:
