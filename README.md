@@ -1,4 +1,4 @@
-1;2c# pubsub
+# pubsub
 A simple pub-sub polling service with an HTTP-based interface.
 * A topic is identified by a name
 * Subscribers to a topic do not receive past messages
